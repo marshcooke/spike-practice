@@ -6,7 +6,7 @@ myApp.controller('BreweryController', function ($http) {
     vm.getInfo = function () {
         $http({
             method: 'GET',
-            url: '/'
+            url: '/brewery'
         }).then(function (response) {
             console.log('Received', response);
             vm.info.list = response.data.data;
