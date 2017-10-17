@@ -16,13 +16,13 @@ var brewery = 'Surly';
 var type = "&type=brewery";
 var keyHead = "&key=";
 var key = process.env.API_KEY;
-var withBreweries = '&withBreweries=y';
-var fullUrl = base + search + brewery + type + withBreweries + keyHead + key;
+var withLocations = '&withLocations=y';
+var fullUrl = base + search + brewery + type +  withLocations + keyHead + key;
 
 app.use(express.static('public'));
 
 app.get('/brewery', function (req, res) {
-    request(base, function (error, response, body) {
+    request(fullUrl, function (error, response, body) {
         console.log('error:', error); // Print the error if one occurred
         console.log('statusCode: ', response && response.statusCode); // Print the response status code if a response was received
         console.log('body: ', body); // Print the HTML for the Google homepage.

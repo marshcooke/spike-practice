@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ngMap']);
+var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.controller('BreweryController', function ($http) {
     var vm = this;
