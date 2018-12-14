@@ -8,7 +8,8 @@
 
     <script src="vendors/angular.min.js"></script>
     <script src="vendors/angular-route.min.js"></script>
-    <!-- <script src="vendors/ng-map.js"></script>     -->
+
+    <script src="vendors/ng-map.js"></script>    
     
     <script src="scripts/client.js"></script>
     
@@ -18,11 +19,16 @@
 <body ng-app="myApp">
     <!-- <header ng-include="'/views/partial-map.html'"></header> -->
     <!-- <header ng-include="'/views/map-directions.html'"></header> -->
-    <h1>BreweryDB API Test</h1>
-    <div ng-controller="BreweryController as BC">
-        <div ng-repeat="data in BC.info">
-            <div>Brewery Location Information: </br> {{BC.info}}</div>
-        </div>
+    <h1>ngMap Test</h1>
+
+
+    <div ng-app="ngMap">
+
+                <ng-map zoom="14" center="42.3726399, -71.1096528">
+                  <bicycling-layer></bicycling-layer>
+                </ng-map>
+
+
     </div>
 </body>
 
